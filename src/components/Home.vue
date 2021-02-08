@@ -35,27 +35,21 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "Home",
   components: {
-    CustomTitle: () => import("./CustomTitle"),
-    SliderActions: () => import("./SliderActions"),
-    FeatureContainer: () => import("./FeatureContainer"),
-    GalleryMiddle: () => import("./GalleryMiddle"),
-    GalleryMain: () => import("./GalleryMain"),
-    CustomFooter: () => import("./CustomFooter"),
+    CustomTitle: () => import("../components/CustomTitle"),
+    SliderActions: () => import("../components/SliderActions"),
+    FeatureContainer: () => import("../components/FeatureContainer"),
+    GalleryMiddle: () => import("../components/GalleryMiddle"),
+    GalleryMain: () => import("../components/GalleryMain"),
+    CustomFooter: () => import("../components/CustomFooter"),
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.main {
-  background-image: url("../assets/Group 4524.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 930px;
-  position: relative;
-}
+/* general classes */
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -65,11 +59,22 @@ export default {
   margin-top: 43px;
 }
 
-.stick-in-bottom {
-  margin-top: 265px;
-}
 .bg-white {
   background-color: white;
+}
+
+/* specific selectors */
+
+.main {
+  background-image: url("../assets/Group 4524.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 930px;
+  position: relative;
+}
+
+.stick-in-bottom {
+  margin-top: 265px;
 }
 
 .features {
@@ -102,9 +107,11 @@ export default {
     display: block;
     margin-top: 85px;
   }
+
   .main {
     height: auto;
   }
+
   .features {
     height: auto;
     border-radius: 0px;

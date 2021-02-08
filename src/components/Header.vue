@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <header>
     <div class="header">
       <ul>
         <li class="header-title">
@@ -8,7 +8,9 @@
       </ul>
       <ul class="header-mt">
         <li>
-          محصولات ↓
+          <a href="#products">
+            محصولات ↓
+          </a>
         </li>
         <li>
           اتاق ها
@@ -27,14 +29,14 @@
       </ul>
     </div>
     <router-view />
-  </div>
+  </header>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style css-scoped>
+<style scoped>
 ul {
   list-style-type: none;
   padding: 0;
@@ -49,6 +51,12 @@ li:not(:first-child) {
   margin-right: 31px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
 .logo {
   width: 39px;
   height: 34px;
@@ -58,10 +66,11 @@ li:not(:first-child) {
   color: white;
   display: flex;
   justify-content: space-around;
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 0;
   left: 0;
+  z-index: 1;
 }
 
 .header:after {
@@ -75,5 +84,11 @@ li:not(:first-child) {
 
 .header-mt {
   margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+  ul:nth-child(2) {
+    display: none;
+  }
 }
 </style>

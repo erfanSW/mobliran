@@ -23,4 +23,7 @@ body {
 * {
   font-family: 'IranSans'
 }
+.flex {
+  display: flex;
+}
 </style>
